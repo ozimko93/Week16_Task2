@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Форма регистрации</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form action="" name="registration">
+        <h1 class="title">Форма регистрации</h1>
+        <div>
+          <label>Имя</label>
+          <input
+            type="text"
+            name="name"
+            minlength="2"
+            maxlength="20"
+            placeholder="Введите Ваше имя"
+            required
+          />
+          <p class="err" id="err_name"></p>
+        </div>
+        <div>
+          <label>Почта</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="Введите Вашу почту"
+            required
+          />
+          <p class="err" id="err_email"></p>
+        </div>
+        <div>
+          <label>Возраст</label>
+          <input
+            type="number"
+            name="age"
+            placeholder="Введите Ваш возраст"
+            required
+          />
+          <p class="err" id="err_age"></p>
+        </div>
+        <h3>Выберите Ваш пол:</h3>
+        <p class="err" id="err_gender"></p>
+        <div class="gender">
+          <label for="male">Мужчина</label>
+          <input type="radio" id="male" name="gender" value="male" />
+          <label for="female">Женщина</label>
+          <input type="radio" id="female" name="gender" value="female" />
+        </div>
+        <div>
+          <select name="profession">
+            <option hidden>Выберите Вашу профессию</option>
+            <option value="doctor">Врач</option>
+            <option value="programmer">Программист</option>
+            <option value="teacher">Учитель</option>
+            <option value="designer">Дизайнер</option>
+            <option value="engineer">Инженер</option>
+            <option value="salesperson">Продавец</option>
+            <option value="other">Другое</option>
+          </select>
+          <p class="err" id="err_profession"></p>
+        </div>
+        <div>
+          <label>Пароль</label>
+          <input
+            type="password"
+            name="password"
+            placeholder="Введите Ваш пароль"
+            minlength="8"
+            required
+          />
+          <p class="err" id="err_password"></p>
+        </div>
+        <div class="agreement">
+          <input type="checkbox" id="agreement" name="agreement" required />
+          <label for="agreement">Согласен с обработкой данных</label>
+          <p class="err" id="err_agreement"></p>
+        </div>
+        <div>
+          <input type="submit" value="Отправить" class="submit" />
+        </div>
+      </form>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
